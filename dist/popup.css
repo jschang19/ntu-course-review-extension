@@ -1,0 +1,75 @@
+
+body {
+	 width: 500px;
+	 height: 300px;
+}
+
+.btn-sm{
+	width: 25px !important;
+	max-width: 100% !important;
+	max-height: 100% !important;
+	height: 25px !important;
+	text-align: center;
+	padding: 0px;
+}
+.nav-pills .nav-switch.active, .nav-pills .show>.nav-switch{
+	background-color: var(--nero-black);
+	color: #ffffff;
+}
+
+.nav-switch:focus,.nav-switch:hover {
+    background: #f8f9fa;
+	color: var(--nero-black);
+}
+
+.nav-switch {
+    color: #000000;
+}
+
+ :root {
+	/* GENERAL FONT */
+	/* GENERAL COLOR */
+	 --bg-col-1: #0059b3;
+	 --bg-col-3: #fff;
+	 --bg-col-4: #024c96;
+	 --tx-color-1: #fff;
+	 --tx-color-2: #000;
+	 --tx-color-3: #0059b3;
+	 --tx-slider-section-title: #212529;
+	 --bg-slider-section: #fff;
+	 --bg-slider-card-4: #fff;
+	 --tx-slider-card-4: #0059b3;
+	 --tx-button: #fff;
+	 --bg-button: #0059b3;
+	 --gray: #aaaaaa;
+	 --nero-black: #1c1c1c;
+}
+/*start dark mode css*/
+ .dark-mode {
+	/* GENERAL COLOR */
+	 --bg-col-1: #121212;
+	 --tx-color-1: #fff;
+	 --tx-button: #fff;
+	 --bg-button: #272727;
+	 --bg-button-border: #272727;
+	 --bg-button-hover: #fff;
+	 --tx-button-hover: #272727;
+	 --bg-button-focus: #0f0f0f 40;
+	 --tx-slider-section-title: #fff;
+	 --bg-slider-section: #121212;
+	 --bg-slider-card-4: #272727;
+	 --tx-slider-card-4: #fff;
+}
+/* end dark mode css */
+
+.card-title {
+	 line-height: 1.7rem;
+	 font-size: 1.1rem;
+	 font-weight: 500;
+	 color: var(--bg-button-border);
+}
+
+.card-text{
+	font-size: 0.95rem;
+	color: var(--gray);
+}
