@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "台大課程評價小幫手",
-    "description": "搜集台大課程評價",
+    "description": "輕鬆查詢台大課程評價",
     "version": "1.0.0",
     "author": "jschang19",
     "action": {
@@ -9,12 +9,13 @@
         "default_title": "台大課程評價小幫手",
         "default_icon": "icon.png"
     },
+    "icons": {
+        "128": "icon_128.png"
+    },
     "permissions": [
-        "activeTab",
-        "tabs",
-        "scripting"
+        "tabs"
     ],
     "host_permissions": [
-        "https://ntucourse-api.jcshawn.com/api/*"
+        "https://ntucourse-api.jcshawn.com/api/course/*"
     ]
 }

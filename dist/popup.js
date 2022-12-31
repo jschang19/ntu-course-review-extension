@@ -29,7 +29,7 @@ const checkUrl = (url) => {
 	}
 };
 
-const removeSpinner = () =>{
+const removeSpinner = () => {
 	$('.spinner-area').fadeOut('fast', function () {
 		$(this).remove();
 	});
@@ -55,7 +55,7 @@ const getReviewData = (id) => {
 				}).fadeIn('fast');
 			} else {
 				let teacher = res.teacher;
-				let class_title = res.class_title;
+				let class_name = res.class_name;
 				let id = res.id;
 				let ptt_reviews = res.reviews.ptt ? res.reviews.ptt : [];
 				let dcard_reviews = res.reviews.dcard ? res.reviews.dcard : [];
@@ -65,7 +65,12 @@ const getReviewData = (id) => {
 				$('.nav-pills').fadeIn('fast');
 				$('#heading')
 					.fadeOut(function () {
-						$(this).text(class_title + ' - ' + teacher);
+						if(teacher == null){
+							$(this).text(id +' / '+class_name);
+						}
+						else{
+							$(this).text(id + ' / '+class_name + ' - ' + teacher);
+						}
 					})
 					.fadeIn('fast');
 				if (ptt_reviews.length != 0) {
@@ -83,6 +88,11 @@ const getReviewData = (id) => {
 							.hide()
 							.fadeIn('fast');
 					});
+				} else {
+					$('.results').append('<p class="text-center ptt-result">沒有 PTT 評價</p>');
+					if (teacher != null) {
+						$('.results').append('<div class="d-flex justify-content-center ptt-result"><a href="https://www.google.com/search?q=' + teacher + ' site:ptt.cc/bbs/NTUcourse" class="btn btn-light result-link ptt-result">看教授 PTT 評價</a></div>');
+					}
 				}
 
 				if (dcard_reviews.length != 0) {
@@ -98,6 +108,10 @@ const getReviewData = (id) => {
 						);
 					});
 				} else {
+					$('.results').append('<p class="text-center dcard-result">沒有 Dcard 評價</p>');
+					if (teacher != null) {
+						$('.results').append('<div class="d-flex justify-content-center ptt-result"><a href="https://www.dcard.tw/search?forum=ntu&query=' + teacher + '" class="btn btn-light result-link dcard-result">教授在 Dcard 的相關貼文</a></div>');
+					}
 				}
 
 				if (ntu_rating_reviews.length != 0) {
@@ -112,6 +126,11 @@ const getReviewData = (id) => {
 							'" class="btn btn-light result-link">看內容</a></div></div><!--end!--></div>'
 						);
 					});
+				} else {
+					$('.results').append('<p class="text-center ntu-rating-result">沒有 NTU Rating 評價</p><div class="d-flex justify-content-center ptt-result "></div>');
+					if (teacher != null) {
+						$('.results').append('<a href="https://rating.myntu.me/search/0?courseName=' + class_name + '&instructor=' + teacher + '&strictSchedule=false" class="btn btn-light result-link ntu-rating-result">搜尋 NTU Rating</a>');
+					}
 				}
 				$('.ptt-result').addClass('showed');
 				$('.dcard-result').hide();
