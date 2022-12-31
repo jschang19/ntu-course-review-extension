@@ -129,7 +129,7 @@ const getReviewData = (id) => {
 				} else {
 					$('.results').append('<p class="text-center ntu-rating-result">沒有 NTU Rating 評價</p><div class="d-flex justify-content-center ptt-result "></div>');
 					if (teacher != null) {
-						$('.results').append('<a href="https://rating.myntu.me/search/0?courseName=' + class_name + '&instructor=' + teacher + '&strictSchedule=false" class="btn btn-light result-link ntu-rating-result">搜尋 NTU Rating</a>');
+						$('.results').append('<div class="d-flex justify-content-center ptt-result"><a href="https://rating.myntu.me/search/0?courseName=' + class_name + '&instructor=' + teacher + '&strictSchedule=false" class="btn btn-light result-link ntu-rating-result">搜尋 NTU Rating</a></div>');
 					}
 				}
 				$('.ptt-result').addClass('showed');
