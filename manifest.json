@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "台大課程評價小幫手",
     "description": "輕鬆查詢台大課程評價",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "jschang19",
     "action": {
         "default_popup": "popup.html",
