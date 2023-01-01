@@ -106,7 +106,7 @@
   如果你發現有錯誤的資料，或是想補充，可以 [email](mailto:contact@jcshawn.com) 跟我說，我會盡快修正。
 ***
 ## Thanks
-這個小工具是我應用 2022 年所學的後端而做的 side project，透過 Chrome Extension 快速建立前端頁面，並透過 Node.js 建立傳送課程資料的後端 API 來達到前後端分離。  
+這個小工具是我應用 2022 年所學的後端而做的 side project，透過 Chrome Extension 快速建立前端頁面，並透過 Node.js 建立傳送課程資料的後端 API，達到即時更新資料的效果。  
   
 特別感謝實習公司的 Guang 學長跟 William，在去年給我很多 full-stack 開發的觀念、建議跟機會，讓我在這次的 side project 中多了一個使用後端的技能。
 ## References
